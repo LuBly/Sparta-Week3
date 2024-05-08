@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class TopDownController : MonoBehaviour
 {
-    // ¸ó½ºÅÍ¿Í Ä³¸¯ÅÍ °øÅëÀûÀÎ ±â´ÉµéÀ» ³Ö¾î³õ´Â °÷
-    // ¾×¼ÇµéÀ» µî·ÏÇØ³õÀ» ¼ö ÀÖ´Â °÷
+    // ëª¬ìŠ¤í„°ì™€ ìºë¦­í„° ê³µí†µì ì¸ ê¸°ëŠ¥ë“¤ì„ ë„£ì–´ë†“ëŠ” ê³³
+    // ì•¡ì…˜ë“¤ì„ ë“±ë¡í•´ë†“ì„ ìˆ˜ ìˆëŠ” ê³³
 
-    public event Action<Vector2> OnMoveEvent; // ActionÀº ¹«Á¶°Ç void¸¸ ¹İÈ¯ÇØ¾ßÇÑ´Ù. ¾Æ´Ï¸é Func
+    public event Action<Vector2> OnMoveEvent; // Actionì€ ë¬´ì¡°ê±´ voidë§Œ ë°˜í™˜í•´ì•¼í•œë‹¤. ì•„ë‹ˆë©´ Func
     public event Action<Vector2> OnLookEvent;
 
-    // µî·ÏµÇ¾îÀÖ´ø ÀÌº¥Æ®µéÀ» InvokeÇØÁÖ´Â °Í
+    // ë“±ë¡ë˜ì–´ìˆë˜ ì´ë²¤íŠ¸ë“¤ì„ Invokeí•´ì£¼ëŠ” ê²ƒ
     public void CallMoveEvent(Vector2 direction)
     {
         OnMoveEvent?.Invoke(direction);
