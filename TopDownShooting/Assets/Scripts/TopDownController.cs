@@ -8,6 +8,30 @@ public class TopDownController : MonoBehaviour
 
     public event Action<Vector2> OnMoveEvent; // Action은 무조건 void만 반환해야한다. 아니면 Func
     public event Action<Vector2> OnLookEvent;
+    public event Action OnAttackEvent;
+
+    protected bool IsAttack { get; set; }
+    
+    private float timeSinceLastAttack = float.MaxValue;
+    
+    private void Update()
+    {
+        HandleAttackDelay();
+    }
+
+    private void HandleAttackDelay()
+    {
+        // Todo :: Magic Number 수정
+        if(timeSinceLastAttack <= 0.2f)
+        {
+            timeSinceLastAttack += Time.deltaTime;
+        }
+        if (IsAttack && timeSinceLastAttack > 0.2f)
+        {
+            timeSinceLastAttack = 0f;
+            CallAttackEvent();
+        }
+    }
 
     // 등록되어있던 이벤트들을 Invoke해주는 것
     public void CallMoveEvent(Vector2 direction)
@@ -19,4 +43,10 @@ public class TopDownController : MonoBehaviour
     {
         OnLookEvent?.Invoke(direction);
     }
+
+    public void CallAttackEvent()
+    {
+        OnAttackEvent?.Invoke();
+    }
+
 }
