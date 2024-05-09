@@ -8,7 +8,8 @@ public class TopDownController : MonoBehaviour
 
     public event Action<Vector2> OnMoveEvent; // Action은 무조건 void만 반환해야한다. 아니면 Func
     public event Action<Vector2> OnLookEvent;
-    public event Action OnAttackEvent;
+    // public event Action OnAttackEvent; >> 어떤 공격을 했는지 추가
+    public event Action<AttackSO> OnAttackEvent;
 
     protected bool IsAttack { get; set; }
     //protected 선언을 한 이유 : 나만 바꾸고 싶지만, 나를 상속받는 친구들도 가져갈 수 있게
@@ -37,7 +38,7 @@ public class TopDownController : MonoBehaviour
         if (IsAttack && timeSinceLastAttack > stats.CurrentStat.attackSO.delay)
         {
             timeSinceLastAttack = 0f;
-            CallAttackEvent();
+            CallAttackEvent(stats.CurrentStat.attackSO);
         }
     }
 
@@ -52,9 +53,9 @@ public class TopDownController : MonoBehaviour
         OnLookEvent?.Invoke(direction);
     }
 
-    public void CallAttackEvent()
+    public void CallAttackEvent(AttackSO attackSO)
     {
-        OnAttackEvent?.Invoke();
+        OnAttackEvent?.Invoke(attackSO);
     }
 
 }

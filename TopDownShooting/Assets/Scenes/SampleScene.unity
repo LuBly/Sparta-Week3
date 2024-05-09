@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 218689764}
   - component: {fileID: 218689766}
   - component: {fileID: 218689765}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1781,7 +1781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 360437930}
   - component: {fileID: 360437929}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1828,7 +1828,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 383999644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1860,7 +1860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 437178830}
   - component: {fileID: 437178831}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2035,7 +2035,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 545524293}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2069,7 +2069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 703850562}
   - component: {fileID: 703850563}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2154,7 +2154,7 @@ GameObject:
   - component: {fileID: 1182649885}
   - component: {fileID: 1182649887}
   - component: {fileID: 1182649886}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackDeco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2664,7 +2664,7 @@ GameObject:
   - component: {fileID: 1709918641}
   - component: {fileID: 1709918640}
   - component: {fileID: 1709918644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2849,7 +2849,7 @@ MonoBehaviour:
     statsChangeType: 2
     maxHealth: 10
     speed: 5
-    attackSO: {fileID: 0}
+    attackSO: {fileID: 11400000, guid: 82be6fa05fc88eb449f9258e9f973d11, type: 2}
   statsMopdifiers: []
 --- !u!1 &1718392100
 GameObject:
@@ -2862,7 +2862,7 @@ GameObject:
   - component: {fileID: 1718392101}
   - component: {fileID: 1718392103}
   - component: {fileID: 1718392102}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontDeco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3523,7 +3523,7 @@ GameObject:
   - component: {fileID: 1926156334}
   - component: {fileID: 1926156333}
   - component: {fileID: 1926156332}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collision
   m_TagString: Wall
   m_Icon: {fileID: 0}
